@@ -11,11 +11,12 @@ local images = {}
 
 function setUpPlayer(pathToImage)
     image = love.graphics.newImage(pathToImage)
+    return image
 end
 
 function images.load()
-    images.playerGermany = love.graphics.newImage(wilhelmIIPath)
-    images.playerBritain = love.graphics.newImage(georgeVPath)
+    images.playerGermany = setUpPlayer(wilhelmIIPath)
+    images.playerBritain = setUpPlayer(georgeVPath)
 end
 
 return images
